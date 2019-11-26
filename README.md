@@ -1,7 +1,7 @@
 #justauth-spring-security-starter
 
 ##简介
-spring security 认证实质是添加了一系列的Filter进行认证。所以此项目也是开发了一个Filter，并放在了认证链上的最后的位置。<br/>
+spring security 认证实质是添加了一系列的Filter进行认证。所以此项目也是开发了一个Filter，并放在了认证链上的匿名用户过滤器前的位置。<br/>
 此项目基于 <a href="https://github.com/justauth/JustAuth">justauth</a>开发的认证并嫁接到 spring security 的认证上。<br/>
 功能：
     <ul>

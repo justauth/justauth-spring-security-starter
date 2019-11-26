@@ -30,6 +30,7 @@ import org.springframework.security.config.annotation.SecurityConfigurerAdapter;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.web.DefaultSecurityFilterChain;
 import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
+import org.springframework.security.web.authentication.AnonymousAuthenticationFilter;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
@@ -83,7 +84,7 @@ public class JustAuthSocialConfigurer extends SecurityConfigurerAdapter<DefaultS
         http.authenticationProvider(
                 new JustauthAuthenticationProvider(jdbcUsersConnectionRepository, userDetailsService))
 //                .addFilterBefore(postProcess(filter), AbstractPreAuthenticatedProcessingFilter.class);
-                .addFilterAfter(postProcess(filter), FilterSecurityInterceptor.class);
+                .addFilterBefore(postProcess(filter), AnonymousAuthenticationFilter.class);
     }
 
 }
