@@ -100,3 +100,15 @@ justauth:
         redirect-uri: http://test.luoqiz.top/justauth/wjw
 ```
 
+### 引用使用
+ 目前尚未完善，所以未将其上传到maven仓库中心。<br/>
+ 本地导入方法将项目下载下来后，执行 maven install 命令，打包到本地。项目中引入
+```
+        <dependency>
+            <groupId>com.luoqiz.oauth2</groupId>
+            <artifactId>justauth-spring-security-starter</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+```
+
+
